@@ -42,11 +42,12 @@ const Partners = () => {
     }
   ];
 
+
   return (
     <section id="partners" className="partners-section">
       <div className="section-container">
         <h2 className="section-title">What’s our user says about us</h2>
-        <div className="carousel-wrapper" style={{ minHeight: '380px', margin: '0 auto', display: 'flex', justifyContent: 'center' }}>
+        <div className="carousel-wrapper" style={{ width: "100%", minHeight: '380px', margin: '0 auto', display: 'flex', justifyContent: 'center' }}>
           <Carousel
             items={serviceItems}
             baseWidth={1000}
