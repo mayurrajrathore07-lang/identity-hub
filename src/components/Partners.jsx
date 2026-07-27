@@ -55,6 +55,7 @@ const Partners = () => {
             pauseOnHover={true}
             loop={true}
             round={false}
+            backgroundColor='#f1f3f8ff'
           />
         </div>
       </div>
