@@ -1,11 +1,16 @@
 import React from 'react';
 import './Hero.css';
 import productivity from '..//assets/productivity.png';
+import Galaxy from './Galaxy';
+
 
 
 const Hero = () => {
   return (
     <section className="hero-section">
+      <div style={{ width: '100%', height: '100%', position: 'absolute', zIndex: -1 }}>
+        <Galaxy />
+      </div>
       <div className="hero-container">
         <div className="hero-badge">Next-Gen Identity Platform</div>
         <h1 className="hero-title">
@@ -18,7 +23,7 @@ const Hero = () => {
           <button className="hero-btn-primary">start free trail</button>
           <button className="hero-btn-secondary">use it now</button>
         </div>
-        <div className='forimg' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50px', paddingTop: "12%" }}>
+        <div className='forimg' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50px', paddingTop: "3%" }}>
           <img src={productivity} alt="productivity" style={{ width: '65%', height: '65%', objectFit: 'cover', }} />
 
         </div>
