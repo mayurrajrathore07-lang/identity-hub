@@ -68,20 +68,6 @@ const Features = () => {
     'Specialized tools and expert support to eliminate leaked credentials and alias exposure.'
   ];
 
-  const detailed = [
-    'The first step involves identifying all places where your personal information might be present.',
-    'The first step involves identifying all places where your personal information might be present.',
-    'The first step involves identifying all places where your personal information might be present.',
-    'The first step involves identifying all places where your personal information might be present.',
-  ];
-
-  const alldata = [
-    'The first step involves identifying all places where your personal information might be present.',
-    'The first step involves identifying all places where your personal information might be present.',
-    'The first step involves identifying all places where your personal information might be present.',
-    'The first step involves identifying all places where your personal information might be present.',
-  ]
-
   return (
     <section id="features" className="features-section">
       <div className="features-container">

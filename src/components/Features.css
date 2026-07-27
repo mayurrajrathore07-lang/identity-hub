@@ -2,7 +2,7 @@
 .features-section {
   padding: 6rem 2rem;
   background-color: #090a0f;
-  background-image: 
+  background-image:
     radial-gradient(circle at 50% 0%, rgba(147, 51, 234, 0.12), transparent 50%),
     radial-gradient(circle at 80% 50%, rgba(37, 99, 235, 0.08), transparent 50%),
     radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.06), transparent 50%);
@@ -80,7 +80,7 @@
   align-items: center;
   gap: 3rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(12px);
+
   position: relative;
   overflow: hidden;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -492,7 +492,6 @@
   align-items: center;
   gap: 0.85rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
 }
 
 .info-email {
