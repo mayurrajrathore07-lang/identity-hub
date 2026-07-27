@@ -48,7 +48,26 @@ const Services = () => {
         <h2 className="section-title">Our Suite of Protection Services</h2>
         <p className="section-desc">Comprehensive privacy, cloaking, and zero-trust security tools tailored for modern enterprises and individuals.</p>
 
-        <div className="carousel-wrapper" style={{ minHeight: '380px', margin: '0 auto', display: 'flex', justifyContent: 'center' }}>
+        <div className="carousel-wrapper" style={{ minHeight: '380px', margin: '0 auto', display: 'flex', justifyContent: 'center', gap: '20px' }}>
+          <Carousel
+            items={serviceItems}
+            baseWidth={380}
+            autoplay={true}
+            autoplayDelay={3500}
+            pauseOnHover={true}
+            loop={true}
+            round={false}
+          />
+
+          <Carousel
+            items={serviceItems}
+            baseWidth={380}
+            autoplay={true}
+            autoplayDelay={3500}
+            pauseOnHover={true}
+            loop={true}
+            round={false}
+          />
           <Carousel
             items={serviceItems}
             baseWidth={380}
@@ -59,6 +78,7 @@ const Services = () => {
             round={false}
           />
         </div>
+
       </div>
     </section>
   );
