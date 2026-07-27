@@ -1,14 +1,14 @@
 import React from 'react';
-import { 
-  FiChevronsDown, 
-  FiCheck, 
-  FiUser, 
-  FiPhone, 
-  FiMail, 
-  FiCreditCard, 
-  FiKey, 
-  FiLock, 
-  FiMousePointer 
+import {
+  FiChevronsDown,
+  FiCheck,
+  FiUser,
+  FiPhone,
+  FiMail,
+  FiCreditCard,
+  FiKey,
+  FiLock,
+  FiMousePointer
 } from 'react-icons/fi';
 import './Features.css';
 
@@ -61,10 +61,31 @@ const reportingItems = [
 ];
 
 const Features = () => {
+  const featurePoints = [
+    'Comprehensive identification of personal information across public databases and data brokers.',
+    'Automated removal requests and direct outreach to platform administrators to scrub sensitive data.',
+    'Ongoing 24/7 digital monitoring and proactive alerts to keep your identity secure over time.',
+    'Specialized tools and expert support to eliminate leaked credentials and alias exposure.'
+  ];
+
+  const detailed = [
+    'The first step involves identifying all places where your personal information might be present.',
+    'The first step involves identifying all places where your personal information might be present.',
+    'The first step involves identifying all places where your personal information might be present.',
+    'The first step involves identifying all places where your personal information might be present.',
+  ];
+
+  const alldata = [
+    'The first step involves identifying all places where your personal information might be present.',
+    'The first step involves identifying all places where your personal information might be present.',
+    'The first step involves identifying all places where your personal information might be present.',
+    'The first step involves identifying all places where your personal information might be present.',
+  ]
+
   return (
     <section id="features" className="features-section">
       <div className="features-container">
-        
+
         {/* Header Section */}
         <div className="features-header">
           <span className="features-badge">Features</span>
@@ -208,9 +229,9 @@ const Features = () => {
               <div className="visual-shield-container">
                 <div className="shield-illustration">
                   <svg className="shield-svg" viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path 
-                      d="M100 0L195 38V105C195 168 148 216 100 230C52 216 5 168 5 105V38L100 0Z" 
-                      fill="url(#shield-blue-gradient)" 
+                    <path
+                      d="M100 0L195 38V105C195 168 148 216 100 230C52 216 5 168 5 105V38L100 0Z"
+                      fill="url(#shield-blue-gradient)"
                     />
                     <defs>
                       <linearGradient id="shield-blue-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -255,3 +276,4 @@ const Features = () => {
 };
 
 export default Features;
+
