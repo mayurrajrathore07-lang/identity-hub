@@ -35,7 +35,7 @@ const Partners = () => {
     },
     {
       id: 5,
-      title: 'gill s..',
+      title: 'gill gill',
       description: 'Forget about spam, advertising mailings, hacking and attacking robots. Keep your real mailbox clean and secure. Temp Mail provides temporary, secure, anonymous, free, disposable email address. Stalkers and disgruntled acquaintances use the Internet to find addresses, phone numbers and other personal details about their targets. Identity thieves use personal information numbers and other personal details..',
       button: 'Explore Service',
       icon: <FiUserCheck className="carousel-icon" />

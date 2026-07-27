@@ -18,7 +18,7 @@
   font-weight: 700;
   letter-spacing: -0.03em;
   transition: color 0.2s ease;
-  user-select: none;
+
 }
 
 .partner-item:hover {
