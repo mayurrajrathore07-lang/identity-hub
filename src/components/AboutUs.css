@@ -1,0 +1,56 @@
+.about-section {
+  padding: 5rem 2rem 6rem;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.radar-container {
+  width: 320px;
+  height: 320px;
+  margin: 0 auto 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(159, 41, 255, 0.2);
+  box-shadow: 0 0 40px rgba(159, 41, 255, 0.15), inset 0 0 20px rgba(159, 41, 255, 0.05);
+  background: #000000;
+  position: relative;
+}
+
+.about-content p {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+.about-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  min-width: 180px;
+}
+
+.stat-num {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #6366f1;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
