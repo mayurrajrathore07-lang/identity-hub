@@ -114,7 +114,9 @@ export default function Radar({
     let targetMouse = [0.5, 0.5];
 
     function handleMouseMove(e) {
+      if (!gl.canvas) return;
       const rect = gl.canvas.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) return;
       targetMouse = [
         (e.clientX - rect.left) / rect.width,
         1.0 - (e.clientY - rect.top) / rect.height
@@ -161,11 +163,13 @@ export default function Radar({
     });
 
     const mesh = new Mesh(gl, { geometry, program });
+    gl.canvas.style.display = 'block';
+    gl.canvas.style.width = '100%';
+    gl.canvas.style.height = '100%';
     container.appendChild(gl.canvas);
 
     if (enableMouseInteraction) {
-      gl.canvas.addEventListener('mousemove', handleMouseMove);
-      gl.canvas.addEventListener('mouseleave', handleMouseLeave);
+      window.addEventListener('mousemove', handleMouseMove);
     }
 
     let animationFrameId;
@@ -192,13 +196,15 @@ export default function Radar({
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener('resize', resize);
       if (enableMouseInteraction) {
-        gl.canvas.removeEventListener('mousemove', handleMouseMove);
-        gl.canvas.removeEventListener('mouseleave', handleMouseLeave);
+        window.removeEventListener('mousemove', handleMouseMove);
       }
-      container.removeChild(gl.canvas);
+      if (container.contains(gl.canvas)) {
+        container.removeChild(gl.canvas);
+      }
       gl.getExtension('WEBGL_lose_context')?.loseContext();
     };
   }, [speed, scale, ringCount, spokeCount, ringThickness, spokeThickness, sweepSpeed, sweepWidth, sweepLobes, color, backgroundColor, falloff, brightness, enableMouseInteraction, mouseInfluence]);
 
-  return <div ref={containerRef} className="w-full h-full" />;
+  return <div ref={containerRef} className="w-full h-full" style={{ width: '100%', height: '100%', position: 'relative' }} />;
 }
+
