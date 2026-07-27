@@ -2,6 +2,7 @@
   padding: 6rem 2rem 4rem;
   text-align: center;
   position: relative;
+  margin-bottom: 100px;
 }
 
 .hero-container {
@@ -70,7 +71,6 @@
 }
 
 .hero-btn-secondary {
-  background: rgba(255, 255, 255, 0.04);
   color: #f1f5f9;
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 0.85rem 2rem;
@@ -79,8 +79,12 @@
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
+
+  background: linear-gradient(87.43deg, #090EDB 8.8%, #DA24BB 84.38%);
+
 }
 
 .hero-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: linear-gradient(87.43deg, #c01fa5 8.8%, #0c0ebd 84.38%);
+
 }

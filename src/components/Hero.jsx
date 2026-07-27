@@ -1,5 +1,7 @@
 import React from 'react';
 import './Hero.css';
+import productivity from '..//assets/productivity.png';
+
 
 const Hero = () => {
   return (
@@ -12,6 +14,14 @@ const Hero = () => {
         <p className="hero-subtitle">
           Make your data invisible by generating unlimited identities. The next-level in privacy protection for online and travel.
         </p>
+        <div className="hero-cta">
+          <button className="hero-btn-primary">start free trail</button>
+          <button className="hero-btn-secondary">use it now</button>
+        </div>
+        <div className='forimg' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50px', paddingTop: "12%" }}>
+          <img src={productivity} alt="productivity" style={{ width: '65%', height: '65%', objectFit: 'cover', }} />
+
+        </div>
       </div>
     </section>
   );
