@@ -271,12 +271,6 @@
   box-shadow: 0 4px 15px rgba(248, 113, 113, 0.4);
 }
 
-.delete-cursor-wrapper {
-  position: absolute;
-  bottom: -22px;
-  right: -18px;
-}
-
 .ai-lock-box {
   bottom: 0px;
   right: 15px;

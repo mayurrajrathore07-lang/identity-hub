@@ -57,14 +57,6 @@
   transform: translateX(-50%);
 }
 
-.carousel-indicator.active {
-  background-color: #333333;
-}
-
-.carousel-indicator.inactive {
-  background-color: rgba(51, 51, 51, 0.4);
-}
-
 .carousel-item-header {
   margin-bottom: 16px;
   padding: 20px;

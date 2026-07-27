@@ -99,6 +99,7 @@ export default function Radar({
   brightness = 1.0,
   enableMouseInteraction = true,
   mouseInfluence = 0.1
+
 }) {
   const containerRef = useRef(null);
 
