@@ -68,6 +68,7 @@ const Services = () => {
             pauseOnHover={true}
             loop={true}
             round={false}
+            backgroundColor="#150928"
           />
           <Carousel
             items={serviceItems}
