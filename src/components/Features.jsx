@@ -52,21 +52,15 @@ const featureCardsData = [
 ];
 
 const reportingItems = [
-  { id: 1, label: 'Username', value: '+1 (456) 453-3456', icon: <FiUser />, color: 'blue' },
-  { id: 2, label: 'Phone numbers', value: '+1 (456) 453-3456', icon: <FiPhone />, color: 'purple' },
-  { id: 3, label: 'Email address', value: '+1 (456) 453-3456', icon: <FiMail />, color: 'orange' },
-  { id: 4, label: 'Credit card', value: '+1 (456) 453-3456', icon: <FiCreditCard />, color: 'green' },
-  { id: 5, label: 'Password', value: 'Kas3345-r32', icon: <FiKey />, color: 'cyan' },
-  { id: 6, label: 'One-time passcode', value: 'Kas3345-r32', icon: <FiLock />, color: 'emerald' },
+  { id: 1, label: 'Username', value: '000000000000', icon: <FiUser />, color: 'blue' },
+  { id: 2, label: 'Phone numbers', value: '0000000000', icon: <FiPhone />, color: 'purple' },
+  { id: 3, label: 'Email address', value: '000000000', icon: <FiMail />, color: 'orange' },
+  { id: 4, label: 'Credit card', value: '00000000000', icon: <FiCreditCard />, color: 'green' },
+  { id: 5, label: 'Password', value: '**********', icon: <FiKey />, color: 'cyan' },
+  { id: 6, label: 'One-time passcode', value: '123456', icon: <FiLock />, color: 'emerald' },
 ];
 
 const Features = () => {
-  const featurePoints = [
-    'Comprehensive identification of personal information across public databases and data brokers.',
-    'Automated removal requests and direct outreach to platform administrators to scrub sensitive data.',
-    'Ongoing 24/7 digital monitoring and proactive alerts to keep your identity secure over time.',
-    'Specialized tools and expert support to eliminate leaked credentials and alias exposure.'
-  ];
 
   return (
     <section id="features" className="features-section">
@@ -83,7 +77,7 @@ const Features = () => {
           </p>
         </div>
 
-        {/* Cards Wrapper */}
+
         <div className="features-cards-container">
 
           {/* Card 1: Protect Personal Information */}

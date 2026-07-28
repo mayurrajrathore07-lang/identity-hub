@@ -5,7 +5,7 @@ import { FaTwitter, FaInstagram, FaTelegram, FaFacebookF } from 'react-icons/fa6
 
 const AboutUs = () => {
   return (
-    <div id="about" className="about-page-wrapper">
+    <div id="about" className="about-page-wrapper" style={{ paddingTop: '120px' }}>
       <section className="cta-section">
         <div className="redar-container">
           <Radar

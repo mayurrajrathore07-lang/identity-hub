@@ -1,4 +1,14 @@
 .partners-section {
   padding: 4rem 2rem;
   background: rgba(255, 255, 255, 0.01);
+
+}
+
+.section-title {
+
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.5px;
 }
