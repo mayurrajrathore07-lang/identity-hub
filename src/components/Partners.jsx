@@ -21,21 +21,21 @@ const Partners = () => {
     },
     {
       id: 3,
-      title: 'yashasvi ja..',
+      title: 'yashasvi ',
       description: 'Forget about spam, advertising mailings, hacking and attacking robots. Keep your real mailbox clean and secure. Temp Mail provides temporary, secure, anonymous, free, disposable email address. Stalkers and disgruntled acquaintances use the Internet to find addresses, phone numbers and other personal details about their targets. Identity thieves use personal information numbers and other personal details..',
       button: 'Explore Service',
       icon: <FiUserCheck className="carousel-icon" />
     },
     {
       id: 4,
-      title: 'vaibhav s..',
+      title: 'vaibhav ',
       description: 'Forget about spam, advertising mailings, hacking and attacking robots. Keep your real mailbox clean and secure. Temp Mail provides temporary, secure, anonymous, free, disposable email address. Stalkers and disgruntled acquaintances use the Internet to find addresses, phone numbers and other personal details about their targets. Identity thieves use personal information numbers and other personal details..',
       button: 'Explore Service',
       icon: <FiUserCheck className="carousel-icon" />
     },
     {
       id: 5,
-      title: 'gill gill',
+      title: 'gill ',
       description: 'Forget about spam, advertising mailings, hacking and attacking robots. Keep your real mailbox clean and secure. Temp Mail provides temporary, secure, anonymous, free, disposable email address. Stalkers and disgruntled acquaintances use the Internet to find addresses, phone numbers and other personal details about their targets. Identity thieves use personal information numbers and other personal details..',
       button: 'Explore Service',
       icon: <FiUserCheck className="carousel-icon" />
@@ -56,7 +56,7 @@ const Partners = () => {
             pauseOnHover={true}
             loop={true}
             round={false}
-            backgroundColor='#f1f3f8ff'
+            backgroundColor='transparent'
           />
         </div>
       </div>

@@ -42,21 +42,33 @@ const VELOCITY_THRESHOLD = 500;
 const GAP = 16;
 const SPRING_OPTIONS = { type: 'spring', stiffness: 300, damping: 30 };
 
-function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, transition }) {
+function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, transition, backgroundImage, backgroundColor, showButton = false }) {
   const range = [-(index + 1) * trackItemOffset, -index * trackItemOffset, -(index - 1) * trackItemOffset];
   const outputRange = [90, 0, -90];
   const rotateY = useTransform(x, range, outputRange, { clamp: false });
+
+  const bgImg = item.backgroundImage || item.bgImage || backgroundImage;
+  const bgColor = item.backgroundColor || item.bgColor || backgroundColor;
+
+  const itemStyle = {
+    width: itemWidth,
+    height: round ? itemWidth : '100%',
+    rotateY: rotateY,
+    ...(round && { borderRadius: '50%' }),
+    ...(bgColor && { backgroundColor: bgColor }),
+    ...(bgImg && {
+      backgroundImage: `linear-gradient(rgba(15, 12, 29, 0.75), rgba(15, 12, 29, 0.88)), url(${bgImg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    })
+  };
 
   return (
     <motion.div
       key={`${item?.id ?? index}-${index}`}
       className={`carousel-item ${round ? 'round' : ''}`}
-      style={{
-        width: itemWidth,
-        height: round ? itemWidth : '100%',
-        rotateY: rotateY,
-        ...(round && { borderRadius: '50%' })
-      }}
+      style={itemStyle}
       transition={transition}
     >
       <div className={`carousel-item-header ${round ? 'round' : ''}`}>
@@ -65,6 +77,9 @@ function CarouselItem({ item, index, itemWidth, round, trackItemOffset, x, trans
       <div className="carousel-item-content">
         <div className="carousel-item-title">{item.title}</div>
         <p className="carousel-item-description">{item.description}</p>
+        {(showButton || item.showButton) && item.button && (
+          <button className="carousel-item-btn">{item.button}</button>
+        )}
       </div>
     </motion.div>
   );
@@ -77,7 +92,13 @@ export default function Carousel({
   autoplayDelay = 3000,
   pauseOnHover = false,
   loop = false,
-  round = false
+  round = false,
+  backgroundImage,
+  backgroundColor,
+  containerBackgroundImage,
+  containerBackgroundColor,
+  showButton = false,
+  style = {}
 }) {
   const containerPadding = 16;
   const itemWidth = baseWidth - containerPadding * 2;
@@ -208,7 +229,14 @@ export default function Carousel({
       className={`carousel-container ${round ? 'round' : ''}`}
       style={{
         width: `${baseWidth}px`,
-        ...(round && { height: `${baseWidth}px`, borderRadius: '50%' })
+        ...(round && { height: `${baseWidth}px`, borderRadius: '50%' }),
+        ...(containerBackgroundColor && { backgroundColor: containerBackgroundColor }),
+        ...(containerBackgroundImage && {
+          backgroundImage: `linear-gradient(rgba(13, 15, 23, 0.7), rgba(13, 15, 23, 0.85)), url(${containerBackgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }),
+        ...style
       }}
     >
       <motion.div
@@ -238,6 +266,9 @@ export default function Carousel({
             trackItemOffset={trackItemOffset}
             x={x}
             transition={effectiveTransition}
+            backgroundImage={backgroundImage}
+            backgroundColor={backgroundColor}
+            showButton={showButton}
           />
         ))}
       </motion.div>

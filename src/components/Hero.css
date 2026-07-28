@@ -3,6 +3,26 @@
   text-align: center;
   position: relative;
   margin-top: -60px;
+  overflow: hidden;
+}
+
+.hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-bg-glow {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  opacity: 0.85;
+  mix-blend-mode: screen;
 }
 
 .hero-container {
@@ -22,7 +42,6 @@
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-
 }
 
 .hero-title {
@@ -82,12 +101,26 @@
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
-
   background: linear-gradient(87.43deg, #090EDB 8.8%, #DA24BB 84.38%);
-
 }
 
 .hero-btn-secondary:hover {
   background: linear-gradient(87.43deg, #c01fa5 8.8%, #0c0ebd 84.38%);
+}
 
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.hero-productivity-img {
+  position: relative;
+  z-index: 1;
+  width: 65%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }

@@ -6,8 +6,8 @@ import image from '../assets/image.png';
 const Hero = () => {
   return (
     <section className="hero-section">
-      <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0, pointerEvents: 'none' }}>
-        <img src={image} alt="background" style={{ width: '100%', height: '100%', objectPosition: 'center', opacity: 0.8, mixBlendMode: 'screen', }} />
+      <div className="hero-bg-wrapper">
+        <img src={image} alt="background glow" className="hero-bg-glow" />
       </div>
       <div className="hero-container">
         <div className="hero-badge">Next-Gen Identity Platform</div>
@@ -21,9 +21,8 @@ const Hero = () => {
           <button className="hero-btn-primary">start free trail</button>
           <button className="hero-btn-secondary">use it now</button>
         </div>
-        <div className='forimg' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '1px', }}>
-          <img src={productivity} alt="productivity" style={{ width: '65%', height: '65%', objectFit: 'cover', }} />
-
+        <div className="hero-image-container">
+          <img src={productivity} alt="productivity" className="hero-productivity-img" />
         </div>
       </div>
     </section>
