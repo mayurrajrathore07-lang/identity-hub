@@ -231,7 +231,7 @@ const Features = () => {
                   </div>
                   <div className="info-text">
                     <span className="info-label">Email address</span>
-                    <span className="info-val">nija@gmail.com</span>
+                    <span className="info-val">AAAA@gmail.com</span>
                   </div>
                 </div>
 
@@ -241,7 +241,7 @@ const Features = () => {
                   </div>
                   <div className="info-text">
                     <span className="info-label">User name</span>
-                    <span className="info-val">tufayel nija</span>
+                    <span className="info-val">AAAAAaa</span>
                   </div>
                 </div>
               </div>
