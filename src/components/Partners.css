@@ -2,30 +2,3 @@
   padding: 4rem 2rem;
   background: rgba(255, 255, 255, 0.01);
 }
-
-.partners-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 3rem;
-  margin-top: 2rem;
-}
-
-.partner-item {
-  color: #64748b;
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  transition: color 0.2s ease;
-
-}
-
-.partner-item:hover {
-  color: #94a3b8;
-}
-
-.services {
-
-  margin-bottom: 200px;
-}

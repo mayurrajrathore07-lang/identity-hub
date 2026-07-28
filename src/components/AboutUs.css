@@ -63,16 +63,6 @@
   padding-bottom: 0.25rem;
 }
 
-.curved-underline {
-  position: absolute;
-  bottom: -10px;
-  left: -5%;
-  width: 110%;
-  height: 18px;
-  pointer-events: none;
-  overflow: visible;
-}
-
 .cta-description {
   font-size: 1.05rem;
   color: #94a3b8;
@@ -106,7 +96,6 @@
 
 /* Footer Section */
 .footer-section {
-  margin-top: 500px;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -114,7 +103,6 @@
   padding: 3.5rem 3rem 2.5rem;
   margin-top: auto;
   background: rgba(8, 9, 13, 0.6);
-
 }
 
 .footer-container {

@@ -68,7 +68,7 @@ const AboutUs = () => {
 
           <div className="footer-bottom">
             <p className="copyright-text">
-              © Identityhub 2024. All rights reserved
+              © Identityhub 2026. All rights reserved
             </p>
 
             <div className="social-links">
