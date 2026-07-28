@@ -552,11 +552,19 @@
   .feature-card-left,
   .feature-card-right {
     width: 100%;
+
   }
 
   .feature-card-right {
     min-height: auto;
   }
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column-reverse;
+
+
 }
 
 @media (max-width: 640px) {

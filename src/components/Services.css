@@ -130,7 +130,7 @@
   }
 
   .section-title {
-    font-size: 1.85rem;
+    font-size: 1.05rem;
   }
 
   .section-desc {
@@ -155,25 +155,4 @@
     width: 100% !important;
     max-width: 480px;
   }
-}
-
-@media(max-width:768px) {
-  .services-section {
-    width: 100%;
-    padding: 3.5rem 3rem;
-  }
-
-  .section-title {
-    max-width: 600px;
-    align-items: center;
-
-  }
-
-  .section-desc {
-    max-width: 500px;
-    align-items: center;
-    text-wrap: wrap;
-  }
-
-
 }
