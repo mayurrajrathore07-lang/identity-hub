@@ -1,15 +1,13 @@
 import React from 'react';
 import './Hero.css';
-import productivity from '..//assets/productivity.png';
-import Galaxy from './Galaxy';
-
-
+import productivity from '../assets/productivity.png';
+import image from '../assets/image.png';
 
 const Hero = () => {
   return (
     <section className="hero-section">
-      <div style={{ width: '100%', height: '100%', position: 'absolute', zIndex: -1 }}>
-        <Galaxy />
+      <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: -1, overflow: 'hidden' }}>
+        <img src={image} alt="background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       </div>
       <div className="hero-container">
         <div className="hero-badge">Next-Gen Identity Platform</div>
