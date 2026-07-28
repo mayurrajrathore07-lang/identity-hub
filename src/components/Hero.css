@@ -2,6 +2,7 @@
   padding: 6rem 2rem 4rem;
   text-align: center;
   position: relative;
+  margin-top: -60px;
 }
 
 .hero-container {
@@ -13,7 +14,7 @@
 
 .hero-badge {
   display: inline-block;
-  padding: 0.4rem 1rem;
+  padding: 0.3rem 1rem;
   border-radius: 9999px;
   background: rgba(99, 102, 241, 0.1);
   border: 1px solid rgba(99, 102, 241, 0.3);
@@ -21,6 +22,7 @@
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+
 }
 
 .hero-title {

@@ -2,6 +2,9 @@ import React from 'react';
 import Carousel from './Carousel';
 import { FiShield, FiUserCheck, FiCpu, FiEye, FiLock } from 'react-icons/fi';
 import './Services.css';
+import jaddu from '../assets/jaddu.png';
+
+
 
 const Services = () => {
   const serviceItems = [
