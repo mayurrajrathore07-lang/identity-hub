@@ -1,13 +1,13 @@
 import React from 'react';
 import './Hero.css';
 import productivity from '../assets/productivity.png';
-import image from '../assets/image.png';
+import imageee from '../assets/imageee.png';
 
 const Hero = () => {
   return (
     <section className="hero-section">
       <div className="hero-bg-wrapper">
-        <img src={image} alt="background glow" className="hero-bg-glow" />
+        <img src={imageee} alt="background glow" className="hero-bg-glow" />
       </div>
       <div className="hero-container">
         <div className="hero-badge">Next-Gen Identity Platform</div>
