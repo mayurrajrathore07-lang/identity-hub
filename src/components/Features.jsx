@@ -72,7 +72,7 @@ const Features = () => {
     <section id="features" className="features-section">
       <div className="features-container">
 
-        {/* Header Section */}
+
         <div className="features-header">
           <span className="features-badge">Features</span>
           <h2 className="features-title">
