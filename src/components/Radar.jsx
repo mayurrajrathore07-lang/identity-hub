@@ -106,8 +106,15 @@ export default function Radar({
   useEffect(() => {
     if (!containerRef.current) return;
     const container = containerRef.current;
-    const renderer = new Renderer({ alpha: true, premultipliedAlpha: false });
-    const gl = renderer.gl;
+    let renderer;
+    try {
+      renderer = new Renderer({ alpha: true, premultipliedAlpha: false });
+    } catch (err) {
+      console.warn("WebGL initialization failed in Radar:", err);
+      return;
+    }
+    const gl = renderer?.gl;
+    if (!gl) return;
     gl.clearColor(0, 0, 0, 0);
 
     let program;
@@ -115,7 +122,7 @@ export default function Radar({
     let targetMouse = [0.5, 0.5];
 
     function handleMouseMove(e) {
-      if (!gl.canvas) return;
+      if (!gl?.canvas) return;
       const rect = gl.canvas.getBoundingClientRect();
       if (rect.width === 0 || rect.height === 0) return;
       targetMouse = [
@@ -129,21 +136,26 @@ export default function Radar({
     }
 
     function resize() {
-      renderer.setSize(container.offsetWidth, container.offsetHeight);
+      if (!container || !gl) return;
+      const width = container.offsetWidth || 1;
+      const height = container.offsetHeight || 1;
+      renderer.setSize(width, height);
       if (program) {
-        program.uniforms.uResolution.value = [gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height];
+        const aspect = height > 0 ? width / height : 1;
+        program.uniforms.uResolution.value = [gl.canvas.width, gl.canvas.height, aspect];
       }
     }
     window.addEventListener('resize', resize);
     resize();
 
     const geometry = new Triangle(gl);
+    const aspect = gl.canvas.height > 0 ? gl.canvas.width / gl.canvas.height : 1;
     program = new Program(gl, {
       vertex: vertexShader,
       fragment: fragmentShader,
       uniforms: {
         uTime: { value: 0 },
-        uResolution: { value: [gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height] },
+        uResolution: { value: [gl.canvas.width, gl.canvas.height, aspect] },
         uSpeed: { value: speed },
         uScale: { value: scale },
         uRingCount: { value: ringCount },
@@ -177,32 +189,34 @@ export default function Radar({
 
     function update(time) {
       animationFrameId = requestAnimationFrame(update);
-      program.uniforms.uTime.value = time * 0.001;
+      if (program) {
+        program.uniforms.uTime.value = time * 0.001;
 
-      if (enableMouseInteraction) {
-        currentMouse[0] += 0.05 * (targetMouse[0] - currentMouse[0]);
-        currentMouse[1] += 0.05 * (targetMouse[1] - currentMouse[1]);
-        program.uniforms.uMouse.value[0] = currentMouse[0];
-        program.uniforms.uMouse.value[1] = currentMouse[1];
-      } else {
-        program.uniforms.uMouse.value[0] = 0.5;
-        program.uniforms.uMouse.value[1] = 0.5;
+        if (enableMouseInteraction) {
+          currentMouse[0] += 0.05 * (targetMouse[0] - currentMouse[0]);
+          currentMouse[1] += 0.05 * (targetMouse[1] - currentMouse[1]);
+          program.uniforms.uMouse.value[0] = currentMouse[0];
+          program.uniforms.uMouse.value[1] = currentMouse[1];
+        } else {
+          program.uniforms.uMouse.value[0] = 0.5;
+          program.uniforms.uMouse.value[1] = 0.5;
+        }
+
+        renderer.render({ scene: mesh });
       }
-
-      renderer.render({ scene: mesh });
     }
     animationFrameId = requestAnimationFrame(update);
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
       window.removeEventListener('resize', resize);
       if (enableMouseInteraction) {
         window.removeEventListener('mousemove', handleMouseMove);
       }
-      if (container.contains(gl.canvas)) {
+      if (gl?.canvas && container.contains(gl.canvas)) {
         container.removeChild(gl.canvas);
       }
-      gl.getExtension('WEBGL_lose_context')?.loseContext();
+      gl?.getExtension('WEBGL_lose_context')?.loseContext();
     };
   }, [speed, scale, ringCount, spokeCount, ringThickness, spokeThickness, sweepSpeed, sweepWidth, sweepLobes, color, backgroundColor, falloff, brightness, enableMouseInteraction, mouseInfluence]);
 
