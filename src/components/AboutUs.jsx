@@ -3,7 +3,7 @@ import './AboutUs.css';
 import Radar from './Radar';
 import { FaTwitter, FaInstagram, FaTelegram, FaFacebookF } from 'react-icons/fa6';
 
-const AboutUs = () => {
+const AboutUs = ({ onOpenSignIn }) => {
   return (
     <div id="about" className="about-page">
       <section className="cta-section">
@@ -41,7 +41,9 @@ const AboutUs = () => {
           </p>
 
           <div className="cta-button-box">
-            <button className="cta-btn">Start free trial</button>
+            <button className="cta-btn" onClick={() => onOpenSignIn && onOpenSignIn(true)}>Start free trial </button>
+
+
           </div>
         </div>
       </section>
