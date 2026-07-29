@@ -5,7 +5,7 @@ import { FaTwitter, FaInstagram, FaTelegram, FaFacebookF } from 'react-icons/fa6
 
 const AboutUs = () => {
   return (
-    <div id="about" className="about-page-wrapper">
+    <div id="about" className="about-page">
       <section className="cta-section">
         <div className="redar-container">
           <Radar
@@ -40,7 +40,7 @@ const AboutUs = () => {
             productivity with Brainwave, the open AI chat app.
           </p>
 
-          <div className="cta-button-wrapper">
+          <div className="cta-button-box">
             <button className="cta-btn">Start free trial</button>
           </div>
         </div>

@@ -42,7 +42,7 @@ const SignInModal = ({ isOpen, onClose, initialIsSignUp = false }) => {
         <form onSubmit={handleSubmit} className="signin-form">
           <div className="input-group">
             <label htmlFor="email">Email Address</label>
-            <div className="input-wrapper">
+            <div className="input-box">
               <FiMail className="input-icon" />
               <input
                 type="email"
@@ -58,7 +58,7 @@ const SignInModal = ({ isOpen, onClose, initialIsSignUp = false }) => {
 
           <div className="input-group">
             <label htmlFor="password">Password</label>
-            <div className="input-wrapper">
+            <div className="input-box">
               <FiLock className="input-icon" />
               <input
                 type="password"
@@ -75,7 +75,7 @@ const SignInModal = ({ isOpen, onClose, initialIsSignUp = false }) => {
           {isSignUp && (
             <div className="input-group">
               <label htmlFor="confirmPassword">Confirm Password</label>
-              <div className="input-wrapper">
+              <div className="input-box">
                 <FiLock className="input-icon" />
                 <input
                   type="password"

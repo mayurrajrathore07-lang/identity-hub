@@ -6,7 +6,7 @@ import imageee from '../assets/imageee.png';
 const Hero = ({ onOpenSignIn }) => {
   return (
     <section className="hero-section">
-      <div className="hero-bg-wrapper">
+      <div className="hero-bg-box">
         <img src={imageee} alt="background glow" className="hero-bg-glow" />
       </div>
       <div className="hero-container">

@@ -33,7 +33,7 @@
   margin-right: auto;
 }
 
-.carousel-wrapper {
+.carousel-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +47,7 @@
 }
 
 @media (max-width: 1023px) {
-  .carousel-wrapper {
+  .carousel-box {
     flex-direction: column;
     align-items: center;
     gap: 2.25rem;
@@ -56,7 +56,7 @@
 
 
 
-.carousel-wrapper .carousel-container {
+.carousel-box .carousel-container {
   height: 100%;
   max-width: 100%;
   display: flex;
@@ -70,11 +70,11 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-.carousel-wrapper .carousel-track {
+.carousel-box .carousel-track {
   flex-grow: 1;
 }
 
-.carousel-wrapper .carousel-item {
+.carousel-box .carousel-item {
   justify-content: flex-start;
   gap: 1.75rem;
   padding: 2.25rem 1.75rem;
@@ -84,19 +84,19 @@
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.carousel-wrapper .carousel-item:hover {
+.carousel-box .carousel-item:hover {
   border-color: rgba(99, 102, 241, 0.5);
   box-shadow:
     0 15px 35px rgba(99, 102, 241, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-.carousel-wrapper .carousel-item-header {
+.carousel-box .carousel-item-header {
   padding: 0;
   margin: 0;
 }
 
-.carousel-wrapper .carousel-icon-container {
+.carousel-box .carousel-icon-container {
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(56, 189, 248, 0.15) 100%);
   border: 1px solid rgba(99, 102, 241, 0.3);
   width: 52px;
@@ -107,13 +107,13 @@
   border-radius: 14px;
 }
 
-.carousel-wrapper .carousel-icon {
+.carousel-box .carousel-icon {
   width: 24px;
   height: 24px;
   color: #818cf8;
 }
 
-.carousel-wrapper .carousel-item-content {
+.carousel-box .carousel-item-content {
   padding: 0;
   margin: 0;
   display: flex;
@@ -121,13 +121,13 @@
   gap: 0.75rem;
 }
 
-.carousel-wrapper .carousel-item-title {
+.carousel-box .carousel-item-title {
   font-size: 1.35rem;
   font-weight: 700;
   color: #ffffff;
 }
 
-.carousel-wrapper .carousel-item-description {
+.carousel-box .carousel-item-description {
   font-size: 0.95rem;
   line-height: 1.6;
   color: #94a3b8;
@@ -138,7 +138,7 @@
     padding: 3.5rem 1rem;
   }
 
-  .carousel-wrapper .carousel-item {
+  .carousel-box .carousel-item {
     padding: 1.75rem 1.25rem;
   }
 }

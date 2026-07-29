@@ -61,7 +61,7 @@ const Services = () => {
         <h2 className="section-title">Our Suite of Protection Services</h2>
         <p className="section-desc">Comprehensive privacy, cloaking, and zero-trust security tools tailored for modern enterprises and individuals.</p>
 
-        <div className="carousel-wrapper">
+        <div className="carousel-box">
           <Carousel
             items={serviceItems}
             baseWidth={calculatedBaseWidth}

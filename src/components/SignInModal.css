@@ -124,7 +124,7 @@
   color: #cbd5e1;
 }
 
-.input-wrapper {
+.input-box {
   position: relative;
   display: flex;
   align-items: center;
@@ -138,7 +138,7 @@
   pointer-events: none;
 }
 
-.input-wrapper input {
+.input-box input {
   width: 100%;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -150,11 +150,11 @@
   transition: all 0.2s ease;
 }
 
-.input-wrapper input::placeholder {
+.input-box input::placeholder {
   color: #475569;
 }
 
-.input-wrapper input:focus {
+.input-box input:focus {
   border-color: #6366f1;
   background: rgba(255, 255, 255, 0.07);
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);

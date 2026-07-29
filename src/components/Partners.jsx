@@ -36,7 +36,7 @@ const Partners = () => {
     },
     {
       id: 4,
-      title: 'Vaibhav Arora',
+      title: 'Vaibhav suryawanshi',
       description: 'Forget about spam, advertising mailings, hacking and attacking robots. Keep your real mailbox clean and secure. Temp Mail provides temporary, secure, anonymous, free, disposable email address.',
       button: 'Explore Service',
       icon: <FiUserCheck className="carousel-icon" />
@@ -56,7 +56,7 @@ const Partners = () => {
     <section id="partners" className="partners-section">
       <div className="section-container">
         <h2 className="partners-title">What Our Users Say About Us</h2>
-        <div className="carousel-wrapper">
+        <div className="carousel-box">
           <Carousel
             items={serviceItems}
             baseWidth={calculatedWidth}

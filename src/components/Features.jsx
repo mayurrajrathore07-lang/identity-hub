@@ -60,6 +60,8 @@ const reportingItems = [
   { id: 6, label: 'One-time passcode', value: '98971', icon: <FiLock />, color: 'emerald' },
 ];
 
+
+
 const Features = () => {
 
   return (
