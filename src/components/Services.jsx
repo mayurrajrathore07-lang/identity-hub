@@ -51,7 +51,6 @@ const Services = () => {
     }
   ];
 
-  // Dynamic baseWidth for 3 carousels in 1 row on screens >= 1024px
   const calculatedBaseWidth = windowWidth >= 1024
     ? Math.min(380, Math.floor((Math.min(windowWidth, 1200) - 80) / 3))
     : Math.min(380, windowWidth - 32);

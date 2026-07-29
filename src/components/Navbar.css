@@ -119,7 +119,6 @@
   transform: translateY(-1px);
 }
 
-/* Breakpoint 768px: Mobile Drawer */
 @media (max-width: 768px) {
   .mobile-menu-toggle {
     display: flex;

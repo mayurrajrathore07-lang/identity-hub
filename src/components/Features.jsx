@@ -80,7 +80,6 @@ const Features = () => {
 
         <div className="features-cards-container">
 
-          {/* Card 1: Protect Personal Information */}
           <div className="feature-card theme-blue">
             <div className="feature-card-left">
               <div className="feature-card-header">
@@ -138,7 +137,6 @@ const Features = () => {
             </div>
           </div>
 
-          {/* Card 2: Detailed Reporting */}
           <div className="feature-card theme-purple">
             <div className="feature-card-left">
               <div className="feature-card-header">
@@ -180,7 +178,6 @@ const Features = () => {
             </div>
           </div>
 
-          {/* Card 3: Secure All Data */}
           <div className="feature-card theme-green">
             <div className="feature-card-left">
               <div className="feature-card-header">

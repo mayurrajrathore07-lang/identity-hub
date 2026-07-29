@@ -136,7 +136,6 @@
   border-radius: 16px;
 }
 
-/* Mobile Breakpoints */
 @media (max-width: 640px) {
   .hero-section {
     padding: 3rem 1rem 2rem;
