@@ -182,6 +182,7 @@
   justify-content: center;
   flex-shrink: 0;
   margin-top: 2px;
+  margin-left: -10px;
 }
 
 .theme-blue .feature-point-icon {
