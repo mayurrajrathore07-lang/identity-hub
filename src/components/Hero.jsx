@@ -3,7 +3,7 @@ import './Hero.css';
 import productivity from '../assets/productivity.png';
 import imageee from '../assets/imageee.png';
 
-const Hero = () => {
+const Hero = ({ onOpenSignIn }) => {
   return (
     <section className="hero-section">
       <div className="hero-bg-wrapper">
@@ -18,8 +18,8 @@ const Hero = () => {
           Make your data invisible by generating unlimited identities. The next-level in privacy protection for online and travel.
         </p>
         <div className="hero-cta">
-          <button className="hero-btn-primary">Start Free Trial</button>
-          <button className="hero-btn-secondary">Use It Now</button>
+          <button className="hero-btn-primary" onClick={() => onOpenSignIn && onOpenSignIn(true)}>Start Free Trial</button>
+          <button className="hero-btn-secondary" onClick={() => onOpenSignIn && onOpenSignIn(false)}>Use It Now</button>
         </div>
         <div className="hero-image-container">
           <img src={productivity} alt="productivity dashboard preview" className="hero-productivity-img" />
