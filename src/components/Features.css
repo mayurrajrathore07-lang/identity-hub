@@ -46,7 +46,7 @@
 
 .features-title .highlight {
   background: linear-gradient(135deg, #a855f7, #c084fc);
-  -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
   color: #c084fc;
 }
