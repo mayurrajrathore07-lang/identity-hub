@@ -100,8 +100,20 @@ export default function Carousel({
   showButton = false,
   style = {}
 }) {
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const containerPadding = 16;
-  const itemWidth = baseWidth - containerPadding * 2;
+  const maxAvailableWidth = Math.max(280, windowWidth - 32);
+  const effectiveBaseWidth = Math.min(baseWidth, maxAvailableWidth);
+  const itemWidth = Math.max(240, effectiveBaseWidth - containerPadding * 2);
   const trackItemOffset = itemWidth + GAP;
   const itemsForRender = useMemo(() => {
     if (!loop) return items;
@@ -110,6 +122,7 @@ export default function Carousel({
   }, [items, loop]);
 
   const [position, setPosition] = useState(loop ? 1 : 0);
+
   const x = useMotionValue(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isJumping, setIsJumping] = useState(false);
@@ -228,8 +241,10 @@ export default function Carousel({
       ref={containerRef}
       className={`carousel-container ${round ? 'round' : ''}`}
       style={{
-        width: `${baseWidth}px`,
-        ...(round && { height: `${baseWidth}px`, borderRadius: '50%' }),
+        width: `${effectiveBaseWidth}px`,
+        maxWidth: '100%',
+        ...(round && { height: `${effectiveBaseWidth}px`, borderRadius: '50%' }),
+
         ...(containerBackgroundColor && { backgroundColor: containerBackgroundColor }),
         ...(containerBackgroundImage && {
           backgroundImage: `linear-gradient(rgba(13, 15, 23, 0.7), rgba(13, 15, 23, 0.85)), url(${containerBackgroundImage})`,

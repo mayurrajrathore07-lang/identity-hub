@@ -545,14 +545,13 @@
 @media (max-width: 960px) {
   .feature-card {
     flex-direction: column;
-    padding: 2.25rem;
-    gap: 2.5rem;
+    padding: 2.25rem 1.5rem;
+    gap: 2rem;
   }
 
   .feature-card-left,
   .feature-card-right {
     width: 100%;
-
   }
 
   .feature-card-right {
@@ -560,33 +559,57 @@
   }
 }
 
-.feature-card {
-  display: flex;
-  flex-direction: column-reverse;
-
-
-}
-
 @media (max-width: 640px) {
   .features-section {
-    padding: 4rem 1.25rem;
+    padding: 4rem 1rem;
   }
 
   .features-title {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
   }
 
   .visual-reporting-grid {
     grid-template-columns: 1fr;
   }
 
+  .visual-stack-container {
+    height: 230px;
+  }
+
+  .layer-front {
+    right: 10px;
+    top: 20px;
+    width: 95%;
+  }
+
+  .delete-badge {
+    bottom: 5px;
+    left: 5px;
+  }
+
+  .ai-lock-badge {
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .visual-shield-container {
+    height: 240px;
+  }
+
+  .shield-illustration {
+    width: 140px;
+    height: 170px;
+  }
+
   .info-email {
     left: 0;
-    bottom: 90px;
+    bottom: 10px;
+    padding: 0.6rem 0.85rem;
   }
 
   .info-user {
     right: 0;
     bottom: 10px;
+    padding: 0.6rem 0.85rem;
   }
 }

@@ -53,9 +53,9 @@ const featureCardsData = [
 
 const reportingItems = [
   { id: 1, label: 'Username', value: '000000000000', icon: <FiUser />, color: 'blue' },
-  { id: 2, label: 'Phone numbers', value: '0000000000', icon: <FiPhone />, color: 'purple' },
+  { id: 2, label: 'Phone numbers', value: '90+18=108', icon: <FiPhone />, color: 'purple' },
   { id: 3, label: 'Email address', value: '000000000', icon: <FiMail />, color: 'orange' },
-  { id: 4, label: 'Credit card', value: '00000000000', icon: <FiCreditCard />, color: 'green' },
+  { id: 4, label: 'Credit card', value: '40+70=110', icon: <FiCreditCard />, color: 'green' },
   { id: 5, label: 'Password', value: '**********', icon: <FiKey />, color: 'cyan' },
   { id: 6, label: 'One-time passcode', value: '123456', icon: <FiLock />, color: 'emerald' },
 ];
