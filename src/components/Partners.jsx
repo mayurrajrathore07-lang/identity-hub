@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from './Carousel';
 import { FiUserCheck } from 'react-icons/fi';
 import './Partners.css';
 
 const Partners = () => {
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const serviceItems = [
     {
       id: 1,
@@ -42,6 +50,8 @@ const Partners = () => {
     }
   ];
 
+  const calculatedWidth = Math.min(1000, Math.max(280, windowWidth - 48));
+
   return (
     <section id="partners" className="partners-section">
       <div className="section-container">
@@ -49,7 +59,7 @@ const Partners = () => {
         <div className="carousel-wrapper">
           <Carousel
             items={serviceItems}
-            baseWidth={1000}
+            baseWidth={calculatedWidth}
             autoplay={true}
             autoplayDelay={3500}
             pauseOnHover={true}
@@ -64,5 +74,6 @@ const Partners = () => {
 };
 
 export default Partners;
+
 
 

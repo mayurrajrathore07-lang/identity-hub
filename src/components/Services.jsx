@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from './Carousel';
 import { FiShield, FiUserCheck, FiCpu, FiEye, FiLock } from 'react-icons/fi';
 import './Services.css';
 import jaddu from '../assets/jaddu.png';
 
-
-
 const Services = () => {
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const serviceItems = [
     {
       id: 1,
@@ -45,6 +51,11 @@ const Services = () => {
     }
   ];
 
+  // Dynamic baseWidth for 3 carousels in 1 row on screens >= 1024px
+  const calculatedBaseWidth = windowWidth >= 1024
+    ? Math.min(380, Math.floor((Math.min(windowWidth, 1200) - 80) / 3))
+    : Math.min(380, windowWidth - 32);
+
   return (
     <section id="services" className="services-section">
       <div className="section-container">
@@ -54,7 +65,7 @@ const Services = () => {
         <div className="carousel-wrapper">
           <Carousel
             items={serviceItems}
-            baseWidth={380}
+            baseWidth={calculatedBaseWidth}
             autoplay={true}
             autoplayDelay={3500}
             pauseOnHover={true}
@@ -65,7 +76,7 @@ const Services = () => {
           />
           <Carousel
             items={serviceItems}
-            baseWidth={380}
+            baseWidth={calculatedBaseWidth}
             autoplay={true}
             autoplayDelay={3500}
             pauseOnHover={true}
@@ -76,7 +87,7 @@ const Services = () => {
           />
           <Carousel
             items={serviceItems}
-            baseWidth={380}
+            baseWidth={calculatedBaseWidth}
             autoplay={true}
             autoplayDelay={3500}
             pauseOnHover={true}
@@ -93,4 +104,5 @@ const Services = () => {
 };
 
 export default Services;
+
 
